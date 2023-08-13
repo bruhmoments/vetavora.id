@@ -1,7 +1,8 @@
 /* Swiper Styling */
 .swiper {
-  width: 100%;
+  width: auto;
   height: 75vh;
+  aspect-ratio: 4/3;
 }
 
 .swiper-slide {
@@ -610,8 +611,9 @@ section {
 # Call To Action
 --------------------------------------------------------------*/
 .call-to-action {
-  background: linear-gradient(rgba(1, 41, 42, 0.5), rgba(7, 56, 57, 0.5)), url("../img/call-to-action-bg.jpg") fixed center center;
-  background-size: cover;
+  /* background: linear-gradient(rgba(1, 41, 42, 0.5), rgba(7, 56, 57, 0.5)), url("../img/call-to-action-bg.jpg") fixed center center; */
+  /* background-size: cover; */
+  background: linear-gradient(rgba(117, 61, 125, 1), rgba(93, 49, 99, 1));
   padding: 60px 0;
 }
 
