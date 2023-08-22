@@ -84,6 +84,10 @@ section {
   background-color: #f2f9f8;
 }
 
+.section-bg-gray {
+  background-color: #f4f4f5
+}
+
 .section-bg-gold {
   background-color: rgba(221, 179, 94, 0.66);
 }
@@ -577,6 +581,7 @@ section {
 #about {
   padding-top: 15px !important; 
 }
+
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/

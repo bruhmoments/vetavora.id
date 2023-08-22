@@ -24,6 +24,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/slider.css" rel="stylesheet">
 </head>
 
 <body>
@@ -74,7 +75,7 @@
       <div class="container">
 
         <!-- Swiper -->
-        <div class="swiper mySwiper">
+        <div class="swiper tronSwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <img src="assets/img/VetavoraSlide2.jpg"/>
@@ -160,7 +161,74 @@
             <!-- <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p> -->
           </div>
         </div>
-
+      </div>
+      <div class="container section-bg-gray py-4 rounded-1">
+        <div class="row">
+          <div class="col-md-4 ps-4 pt-4">
+            <div class="container">
+              <div class="row ps-4">
+                <div class="col-12 py-1"><h4>Webinar</h4></div>
+                <div class="col-12 py-1">
+                  <i class="bi bi-archive fw-bolder" style="font-size: 1.2rem;"></i>
+                  &nbsp; Kelas
+                </div>
+                <div class="col-12 py-1">
+                  <i class="bi bi-people fw-bolder" style="font-size: 1.2rem;"></i>
+                  &nbsp; 142+ Orang telah belajar di sini
+                </div>
+                <div class="col-12">
+                  <hr style="height:1px;border-width:0;color:gray;background-color:gray">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="container">
+              <div class="row">
+                <div class="col-10"></div>
+                <div class="col-2" style="text-align: right;">
+                  <span id="boot-icon" class="bi bi-arrow-left-circle webinar-prev" style="font-size:2.1rem; margin-right: .2em;"></span>
+                  <span id="boot-icon" class="bi bi-arrow-right-circle webinar-next" style="font-size:2.1rem;"></span>
+                </div>
+                <div id="webinar-swiper" class="col-12 slider mySwiper">
+                  <div class="image-items swiper-wrapper">
+                    <div class="card image swiper-slide">
+                      <img class="img-fluid" alt="" src="assets/img/portfolio/portfolio-10.jpg">
+                      <div class="card-body">
+                          <h4 class="card-title">Special title treatment</h4>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                    </div>
+                    <div class="card image swiper-slide">
+                      <img class="img-fluid" alt="" src="assets/img/portfolio/portfolio-10.jpg">
+                      <div class="card-body">
+                          <h4 class="card-title">Special title treatment</h4>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                    </div>
+                    <div class="card image swiper-slide">
+                      <img class="img-fluid" alt="" src="assets/img/portfolio/portfolio-10.jpg">
+                      <div class="card-body">
+                          <h4 class="card-title">Special title treatment</h4>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                    </div>
+                    
+                    <!-- <div class="image swiper-slide"><img src="assets/img/portfolio/portfolio-10.jpg" alt=""></div>
+                    <div class="image swiper-slide"><img src="assets/img/portfolio/portfolio-10.jpg" alt=""></div>
+                    <div class="image swiper-slide"><img src="assets/img/portfolio/portfolio-10.jpg" alt=""></div>
+                    <div class="image swiper-slide"><img src="assets/img/portfolio/portfolio-10.jpg" alt=""></div>
+                    <div class="image swiper-slide"><img src="assets/img/portfolio/portfolio-10.jpg" alt=""></div>
+                    <div class="image swiper-slide"><img src="assets/img/portfolio/portfolio-10.jpg" alt=""></div>
+                    <div class="image swiper-slide"><img src="assets/img/portfolio/portfolio-10.jpg" alt=""></div>
+                    <div class="image swiper-slide"><img src="assets/img/portfolio/portfolio-10.jpg" alt=""></div>
+                    <div class="image swiper-slide"><img src="assets/img/portfolio/portfolio-10.jpg" alt=""></div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section><!-- End Services Section -->
 
@@ -429,10 +497,42 @@
 
 <!-- Initialize Swiper -->
 <script>
-  var swiper = new Swiper(".mySwiper", {
+  var swiper = new Swiper(".tronSwiper", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
+    },
+  });
+
+  var swiper = new Swiper("#webinar-swiper", {
+    slidesPerGroup: 1,
+    loop: false,
+    fade: true,
+    // grabCursor: true,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: ".webinar-next",
+      prevEl: ".webinar-prev",
+    },
+    breakpoints: {
+      500: {
+        slidesPerView: 1,
+        // spaceBetween: 20,
+        spaceBetween: 8,
+      },
+      // 868: {
+      //   slidesPerView: 2,
+      //   spaceBetween: 30,
+      // },
+      1000: {
+        slidesPerView: 2.3,
+        // spaceBetween: 30,
+        spaceBetween: 16,
+      },
+      // 1250: {
+      //   slidesPerView: 3,
+      //   spaceBetween: 30,
+      // },
     },
   });
 </script>
